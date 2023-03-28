@@ -39,8 +39,10 @@ public class SongController {
 
     private List<Song> getBestSongs(){
         List<Song> songs = new ArrayList<>();
-        songs.add(new Song(1, "alallal"));
-        songs.add(new Song(2, "gggg"));
+        songs.add(new Song(1, "Felicità"));
+        songs.add(new Song(2, "50 special"));
+        songs.add(new Song(3, "L'amour Toujours"));
+        songs.add(new Song(4, "Bla Bla Bla"));
         return songs;
     }
 }

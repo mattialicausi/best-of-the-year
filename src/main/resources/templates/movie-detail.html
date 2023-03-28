@@ -10,15 +10,20 @@
 <body>
 <nav th:replace="~{fragments :: navbar('movies')}"></nav>
 
-    <h1>Movie detail</h1>
+    <div class="text-center">
 
-    <div>
-        <span>Title: </span>
-        <span th:text="${movie.title}"></span>
+        <h1 class="my-5">Movie detail</h1>
+
+        <div class="d-flex align-items-center justify-content-center">
+            <h1>Title: </h1>
+            <h1 class="my-color" th:text="${movie.title}"></h1class>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+            <h1>Id: </h1>
+            <h1 class="my-color"  th:text="${movie.id}"></h1>
+        </div>
+
     </div>
-    <div>
-        <span>Id: </span>
-        <span  th:text="${movie.id}"></span>
-    </div>
+
 </body>
 </html>

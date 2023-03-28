@@ -44,8 +44,8 @@ public class MovieController {
         List<Movie> movies = new ArrayList<>();
         movies.add(new Movie(1, "The walf of wall street"));
         movies.add(new Movie(2, "Thruman show"));
-        movies.add(new Movie(3, "Thruman show"));
-        movies.add(new Movie(4, "Thruman show"));
+        movies.add(new Movie(3, "Il ritratto di Dorian Gray"));
+        movies.add(new Movie(4, "Il grande Gatsby"));
         return movies;
     }
 }

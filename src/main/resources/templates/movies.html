@@ -9,10 +9,10 @@
 </head>
 <body>
 <nav th:replace="~{fragments :: navbar('movies')}"></nav>
-    <h1>Movies</h1>
+    <h1 class="text-center my-4"> Best Movies</h1>
 
-    <ul>
-        <li th:each=" m : ${movieList}">
+    <ul class="text-center w-50">
+        <li class="b1x p-3 " th:each=" m : ${movieList}">
             <a th:href="@{|/movies/${m.id}|}" th:text="${m.title}"></a>
         </li>
     </ul>

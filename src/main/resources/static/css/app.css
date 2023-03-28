@@ -1,5 +1,40 @@
-body {
-    color: blue;
+
+.b1x{
+    border: 1px solid black;
+}
+
+.be {
+    border-right: 1px solid black;
+}
+
+.bg-active {
+    background-color: rgb(214, 228, 250);
+    border: 1px solid rgb(214, 228, 250);
+}
+
+ul li {
+    list-style: none;
+}
+
+ul {
+    margin: 0 auto;
+}
+
+.mycontainer {
+    height: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.bg-yellow {
+    background-color: rgb(254, 240, 200);
+}
+
+.my-color {
+    color: rgb(214, 228, 250);
 }
 
 

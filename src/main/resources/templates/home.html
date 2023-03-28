@@ -13,7 +13,18 @@
 <body>
     <nav th:replace="~{fragments :: navbar('home')}"></nav>
 
-    <h1 class="ms-5">Best of the year <span th:text="${name}"></span></h1>
+    <h1 class="text-center my-5">Best of by <span th:text="${name}"></span></h1>
+
+    <div class="container b1x">
+        <div class="row">
+            <div class="col-12 fs-1 d-flex justify-content-center align-items-center b1x mycontainer bg-yellow">
+                <a th:href="@{/movies}" th:classAppend="${current == 'movies'} ? bg-active : '' ">Movies</a>
+            </div>
+            <div class="col-12 fs-1 d-flex b1x justify-content-center align-items-center mycontainer">
+                <a th:href="@{/songs}" th:classAppend="${current == 'songs'} ? bg-active : '' ">Songs</a>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
