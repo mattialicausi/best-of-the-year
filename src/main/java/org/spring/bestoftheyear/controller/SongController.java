@@ -18,14 +18,7 @@ public class SongController {
     public String songs(Model model) {
         List<Song> songList = getBestSongs();
 
-        String song = "";
-        for (Song s : songList) {
-            song += s.getTitle() + ", ";
-
-        }
-
-        song = song.substring(0, song.length() -2);
-        model.addAttribute("songs", song);
+        model.addAttribute("songList", songList);
 
         return "songs";
 
@@ -38,11 +31,8 @@ public class SongController {
 
         for(Song s : songList) {
 
-            if(s.getId() == songId) {
+            model.addAttribute("song", s);
 
-                model.addAttribute("song", s);
-
-            }
         }
         return "song-detail";
     }

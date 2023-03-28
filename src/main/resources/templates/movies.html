@@ -8,11 +8,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Movie</h1>
+    <h1>Movies</h1>
 
-    <h2 th:text="${movies}"></h2>
+    <ul>
+        <li th:each=" m : ${movieList}">
+            <a th:href="@{|/movies/${m.id}|}" th:text="${m.title}"></a>
+        </li>
+    </ul>
 
-    <h2 th:text="${movie}"></h2>
+
+
 
 </body>
 </html>

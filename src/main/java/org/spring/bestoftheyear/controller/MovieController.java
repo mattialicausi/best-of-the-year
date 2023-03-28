@@ -18,14 +18,7 @@ public class MovieController {
     public String movies(Model model) {
         List<Movie> movieList = getBestMovies();
 
-        String movie = "";
-        for (Movie m : movieList) {
-            movie += m.getTitle() + ", ";
-
-        }
-
-        movie = movie.substring(0, movie.length() -2);
-        model.addAttribute("movies", movie);
+        model.addAttribute("movieList", movieList);
 
         return "movies";
 
@@ -51,6 +44,8 @@ public class MovieController {
         List<Movie> movies = new ArrayList<>();
         movies.add(new Movie(1, "The walf of wall street"));
         movies.add(new Movie(2, "Thruman show"));
+        movies.add(new Movie(3, "Thruman show"));
+        movies.add(new Movie(4, "Thruman show"));
         return movies;
     }
 }

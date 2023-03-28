@@ -9,8 +9,15 @@
 </head>
 <body>
 
-<h1>Movie detail</h1>
+    <h1>Movie detail</h1>
 
-<h2 th:text="${movie}"></h2>
+    <div>
+        <span>Title: </span>
+        <span th:text="${movie.title}"></span>
+    </div>
+    <div>
+        <span>Id: </span>
+        <span  th:text="${movie.id}"></span>
+    </div>
 </body>
 </html>
