@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
+<head th:insert="~{fragments :: header-links}">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -9,13 +9,15 @@
 </head>
 <body>
 
-<h1>Songs</h1>
+    <nav th:replace="~{fragments :: navbar('songs')}"></nav>
 
-<ul>
-    <li th:each=" s : ${songList}">
-        <a th:href="@{|/songs/${s.id}|}" th:text="${s.title}"></a>
-    </li>
-</ul>
+    <h1>Songs</h1>
+
+    <ul>
+        <li th:each=" s : ${songList}">
+            <a th:href="@{|/songs/${s.id}|}" th:text="${s.title}"></a>
+        </li>
+    </ul>
 
 </body>
 </html>
